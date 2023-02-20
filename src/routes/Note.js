@@ -24,7 +24,7 @@ const Note = require('./../models/Note');
      });
     await newNote.save();
 
-    const response = {message:"New Note Created"+`id:${req.body.id}`};
+    const response = {message:"New Note Created "+`id:${req.body.id}`};
      res.json(response);    
        
  });   

@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 //    ""    : false(cant handle nested objects)
 
 //connecting to mongodb using mongoose
-mongoose.connect("mongodb+srv://manishsharma:manish123@cluster0.5vafntl.mongodb.net/notesdb").then(function(){
+const mongoDbPath ="mongodb+srv://manishsharma:manish123@cluster0.5vafntl.mongodb.net/notesdb";
+mongoose.connect(mongoDbPath).then(function(){
    //App Routes
     app.get("/",function(req,res){
    const response = {message:"API Works"};
@@ -34,7 +35,7 @@ mongoose.connect("mongodb+srv://manishsharma:manish123@cluster0.5vafntl.mongodb.
 
 
 // Starting the server on a PORT
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000 ;
 app.listen(PORT,function(){
-    console.log('Server is up at PORT: 5000');
+    console.log("Server started at PORT: " + PORT);
 });
