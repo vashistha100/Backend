@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 //    ""    : false(cant handle nested objects)
 
 //connecting to mongodb using mongoose
-const mongoDbPath ="mongodb+srv://manishsharma:manish123@cluster0.5vafntl.mongodb.net/notesdb";
+const mongoDbPath ="mongodb+srv://manishsharma:<password>@cluster0.5vafntl.mongodb.net/notesdb";
 mongoose.connect(mongoDbPath).then(function(){
    //App Routes
     app.get("/",function(req,res){
